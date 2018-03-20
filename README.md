@@ -30,7 +30,11 @@ app.use(async function (ctx) {
 app.listen(8080);
 ```
 
-[例子]().
+### [例子](https://github.com/qingqinxl1/koa-engine/tree/master/example).
+```
+cd example
+node app.js
+```
 
 ### settings
 
@@ -52,11 +56,10 @@ app.listen(8080);
 
 ### Layouts
 
-`koa-engine` 支持layouts. 默认文件文`layout`. 如果想要修改默认，使用配置 `settings.layout`.
-Also you can set `layout = false` to disable the layout.
+`koa-engine` 支持layouts. 默认文件`layout`. 如果想要修改默认，使用配置 `settings.layout`.
+若不使用layout，设置`settings.layout:false`
 
-=====
-layout文件举例
+#### layout文件举例
 ```
 <html>
   <head>

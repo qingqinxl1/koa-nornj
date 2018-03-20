@@ -1,13 +1,10 @@
-/*!
- * koa-ejs - example/app.js
- * Copyright(c) 2017 dead_horse <dead_horse@qq.com>
- * MIT Licensed
+/**
+ * koa-engine例子
  */
-
 'use strict';
 
 /**
- * Module dependencies.
+ * 依赖模块.
  */
 
 const Koa = require('koa');
@@ -18,7 +15,7 @@ const app = new Koa();
 
 render(app, {
   root: path.join(__dirname, 'view'),
-  layout: 'template',
+  // layout: 'template',
   extname: 'html',
   cache: true,
   debug: true,
