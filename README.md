@@ -32,8 +32,7 @@ app.listen(8080);
 
 ### [例子](https://github.com/qingqinxl1/koa-engine/tree/master/example).
 ```
-cd example
-node app.js
+node example/app.js
 ```
 
 ### settings
