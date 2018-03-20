@@ -14,8 +14,6 @@ const nj = require('nornj');
 const includeParser = require('nornj/tools/includeParser');
 const readFile = util.promisify(fs.readFile);
 
-console.log('nj:', nj);
-
 /**
  * 处理include
  */
@@ -29,7 +27,6 @@ nj.default.config({
  */
 const defaultSettings = {
   extname: '.html',
-  layoutsDir: 'layouts/',
   bodyPlaceholder: 'body',
   delimiters: null,
   cache: true,
@@ -108,12 +105,10 @@ exports = module.exports = function (app, settings) {
     const ctx = this;
     const context = Object.assign({}, ctx.state, _context);
 
-    // console.log('koa context:', context);
     let html = await render(view, context);
-    // console.log('after render context:', html);
 
     const layout = context.layout === false ? false : (context.layout || settings.layout);
-    // 使用指定排版,将渲染后的内容放到制定排版中
+    // 使用指定母版,将渲染后的内容放到指定母版中
     if (layout) {
       context.body = html;
       html = await render(layout, context);

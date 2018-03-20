@@ -1,7 +1,7 @@
 {
-  "name": "koa-engine",
+  "name": "koa-nornj",
   "version": "1.0.0",
-  "description": "template koa2",
+  "description": "koa2 nornj middleware ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,4 +1,4 @@
-koa-engine
+Koa-Nornj
 =========
 koa服务器端渲染中间件
 使用[nornj](https://github.com/joe-sky/nornj)进行模版渲染
@@ -14,7 +14,6 @@ const app = new Koa();
 
 render(app, {
   root: path.join(__dirname, 'view'),
-  layout: 'template',
   extname: 'html',
   cache: true,
   debug: false,
@@ -38,7 +37,7 @@ node example/app.js
 ### settings
 
 * root: 模版文件根路径.
-* layout: global layout file, default is `layout`, set `false` to disable layout.
+* layout: 全局母版, 默认为 `layout`, 若不需要直接设置为`false`.
 * extname: 模版文件后缀名 (默认 `html`).
 * cache: 缓存编译文件 (默认 `true`).
 * debug: 是否启动debug (默认 `false`).
@@ -48,8 +47,8 @@ node example/app.js
   start: '{{',      //插值变量开始字符，默认为"{{"
   end: '}}',        //插值变量结束字符，默认为"}}"
   extension: '#',   //扩展标签前置字符，默认为"#"
-  prop: '@',       //参数标签前置字符，默认为"@"
-  comment: '#'     //模板注释，默认为<!--#...#-->语法中的"#"
+  prop: '@',        //参数标签前置字符，默认为"@"
+  comment: '#'      //模板注释，默认为<!--#...#-->语法中的"#"
 }
 ```
 
@@ -66,7 +65,7 @@ node example/app.js
   </head>
   <body>
     <h3>koa ejs</h3>
-    {{{body}}
+    {{{body}}}
   </body>
 </html>
 ```
