@@ -1,0 +1,16 @@
+{
+  "name": "koa-engine",
+  "version": "1.0.0",
+  "description": "template koa2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "qingqinxl",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "koa": "^2.5.0",
+    "nornj": "^0.4.2-rc.35"
+  }
+}
