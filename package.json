@@ -4,12 +4,15 @@
   "description": "koa2 nornj middleware ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "example": "node example/app.js"
   },
-  "author": "qingqinxl",
+  "author": "qingqinxl1",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qingqinxl1/koa-nornj"
+  },
   "dependencies": {
-    "debug": "^3.1.0",
     "koa": "^2.5.0",
     "nornj": "^0.4.2-rc.35"
   }

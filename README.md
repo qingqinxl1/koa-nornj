@@ -1,13 +1,14 @@
 Koa-Nornj
 =========
 koa服务器端渲染中间件
-使用[nornj](https://github.com/joe-sky/nornj)进行模版渲染
 
-### Example
+使用[nornj](https://github.com/joe-sky/nornj)进行渲染
+
+### 使用示例
 
 ```js
 const Koa = require('koa');
-const render = require('koa-engine');
+const render = require('koa-nornj');
 const path = require('path');
 
 const app = new Koa();
@@ -29,19 +30,18 @@ app.use(async function (ctx) {
 app.listen(8080);
 ```
 
-### [例子](https://github.com/qingqinxl1/koa-engine/tree/master/example).
+* 项目目录下运行例子
 ```
-node example/app.js
+npm run example
 ```
 
-### settings
+### 设置
 
 * root: 模版文件根路径.
-* layout: 全局母版, 默认为 `layout`, 若不需要直接设置为`false`.
+* layout: 全局母版文件, 默认为 `layout`, 若不需要设置为`false`.
 * extname: 模版文件后缀名 (默认 `html`).
-* cache: 缓存编译文件 (默认 `true`).
-* debug: 是否启动debug (默认 `false`).
-* delimiter: 模板语法规则.
+* cache: 是否缓存编译文件 (默认 `true`).
+* delimiter: 模板语法规则,描述如下:
 ```js
 {
   start: '{{',      //插值变量开始字符，默认为"{{"
@@ -54,8 +54,7 @@ node example/app.js
 
 ### Layouts
 
-`koa-engine` 支持layouts. 默认文件`layout`. 如果想要修改默认，使用配置 `settings.layout`.
-若不使用layout，设置`settings.layout:false`
+`koa-nornj` 支持layouts. 默认文件`layout.html`. 如果想要修改默认,使用配置 `settings.layout`.
 
 #### layout文件举例
 ```
@@ -76,6 +75,6 @@ node example/app.js
 
 ```html
 <div>
-  <# include src="./user.html" name="user"/>
+  <#include src="./user.html"/>
 </div>
 ```

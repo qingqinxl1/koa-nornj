@@ -1,12 +1,11 @@
 /*!
- * koaengine - index.js
+ * Koa-Nornj - index.js
  */
 
 'use strict';
 /**
  * 依赖模块
  */
-const debug = require('debug')('koa-engine');
 const fs = require('fs');
 const util = require('util');
 const path = require('path');
@@ -75,7 +74,6 @@ exports = module.exports = function (app, settings) {
   async function render(view, options) {
     view += settings.extname;
     const viewPath = path.join(settings.root, view);
-    debug(`render: ${viewPath}`);
 
     // 若已经缓存，直接从缓存中获取
     if (settings.cache && cache[viewPath]) {
@@ -87,9 +85,8 @@ exports = module.exports = function (app, settings) {
 
     const fn = nj.compile(tpl, {
       fileName: viewPath,
-      tmplKey: cache ? viewPath : null,
-      tmplRule,
-      debug: settings.debug
+      tmplKey: settings.cache ? viewPath : null,
+      tmplRule
     });
 
     // 缓存当前文件的compile函数
@@ -97,7 +94,6 @@ exports = module.exports = function (app, settings) {
       cache[viewPath] = fn;
     }
 
-    console.log('compile options', options);
     return fn.call(options.scope, options);
   }
 

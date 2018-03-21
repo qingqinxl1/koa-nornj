@@ -1,5 +1,5 @@
 /**
- * koa-engine例子
+ * koa-nornj示例
  */
 'use strict';
 
@@ -17,13 +17,12 @@ render(app, {
   root: path.join(__dirname, 'view'),
   // layout: 'template',
   extname: 'html',
-  cache: true,
-  debug: true,
+  cache: true
 });
 
 app.use(function (ctx, next) {
   ctx.state = ctx.state || {};
-  ctx.state.now = new Date();
+  ctx.state.now = new Date().toLocaleString();
   ctx.state.ip = ctx.ip;
   ctx.state.version = '1.0.0';
   return next();
