@@ -2,7 +2,7 @@ Koa-Nornj
 =========
 koa服务器端渲染中间件
 
-使用[nornj](https://github.com/joe-sky/nornj)进行渲染
+使用[ Nornj ](https://github.com/joe-sky/nornj)进行渲染
 
 ### 使用示例
 
