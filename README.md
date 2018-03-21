@@ -16,8 +16,7 @@ const app = new Koa();
 render(app, {
   root: path.join(__dirname, 'view'),
   extname: 'html',
-  cache: true,
-  debug: false,
+  cache: true
 });
 
 app.use(async function (ctx) {
