@@ -12,8 +12,10 @@
     "type": "git",
     "url": "https://github.com/qingqinxl1/koa-nornj"
   },
+  "devDependencies": {
+    "koa": "^2.5.0"
+  },
   "dependencies": {
-    "koa": "^2.5.0",
     "nornj": "^0.4.2"
   }
 }
