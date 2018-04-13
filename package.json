@@ -1,19 +1,19 @@
 {
   "name": "koa-nornj",
   "version": "1.0.0",
-  "description": "koa2 nornj middleware ",
+  "description": "koa2 nornj middleware",
   "main": "index.js",
   "scripts": {
     "example": "node example/app.js"
   },
   "author": "qingqinxl1",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/qingqinxl1/koa-nornj"
   },
   "dependencies": {
     "koa": "^2.5.0",
-    "nornj": "^0.4.2-rc.35"
+    "nornj": "^0.4.2"
   }
 }

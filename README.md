@@ -1,4 +1,4 @@
-Koa-Nornj
+Koa-NornJ
 =========
 koa服务器端渲染中间件
 
@@ -77,3 +77,7 @@ npm run example
   <#include src="./user.html"/>
 </div>
 ```
+
+## License
+
+MIT
