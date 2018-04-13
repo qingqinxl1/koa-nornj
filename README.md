@@ -4,6 +4,8 @@ koa服务器端渲染中间件
 
 使用[ Nornj ](https://github.com/joe-sky/nornj)进行渲染
 
+### 安装
+`npm install koa-nornj`
 ### 使用示例
 
 ```js

@@ -1,6 +1,6 @@
 {
   "name": "koa-nornj",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "koa2 nornj middleware",
   "main": "index.js",
   "scripts": {
